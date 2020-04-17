@@ -1,5 +1,7 @@
 package com.ticklersoft.hello_world;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -7,7 +9,9 @@ public class Main {
         System.out.println("Hádej číslo od 1 do 10");
 
         //po spuštění vyzve uživatele k zadání prvního čísla
-        int tipovaneCislo = 4;
+        Scanner sc = new Scanner(System.in);
+        int tipovaneCislo = sc.nextInt();
+
         // po zadání odpoví [samá voda, přihořívá, hoří]
         int cisloKUhadnuti = (int) (Math.random()*10);
         System.out.println(cisloKUhadnuti);

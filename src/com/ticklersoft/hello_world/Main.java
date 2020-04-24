@@ -5,32 +5,40 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        //aplikace na hádání čísel od 1 do 10
         System.out.println("Hádej číslo od 1 do 10");
-        int cisloKUhadnuti = (int) (Math.random()*10);
-        int tipovaneCislo = 0;
-        //po spuštění vyzve uživatele k zadání prvního čísla
-        Scanner sc = new Scanner(System.in);
-        while(tipovaneCislo != cisloKUhadnuti){
-            tipovaneCislo = sc.nextInt();
-            // po zadání odpoví [samá voda, přihořívá, hoří]
-//            System.out.println(cisloKUhadnuti);
+        int cisloKUhadnuti = generujNahodneCislo();
 
-            int tolerancePrihorivani = 2;
-            if(Math.abs(tipovaneCislo - cisloKUhadnuti) <= tolerancePrihorivani)   {
-                System.out.println("Prihoriva");
-            } else {
-                System.out.println("Sama voda");
+        int tipovaneCislo;
+        boolean uhadnul;
+        do {
+            tipovaneCislo = uzivateliHadej();
+            uhadnul = tipovaneCislo == cisloKUhadnuti;
+            if (!uhadnul) {
+                vysvetliUzivateliJakMocToNeuhadnul(cisloKUhadnuti, tipovaneCislo);
             }
-        }
+        } while (!uhadnul);
+
         System.out.println("Hoří");
-
-        // a vyzve hráče k zadání dalšího čísla a celý proces se opakuje, dokud hráč číslo neuhodne
-
-        // na konci vypíše počet pokusů uživatele
-
-
-
     }
+
+    private static int generujNahodneCislo() {
+        return (int) (Math.random() * 10);
+    }
+
+    private static int uzivateliHadej() {
+        Scanner sc = new Scanner(System.in);
+        return sc.nextInt();
+    }
+
+    private static void vysvetliUzivateliJakMocToNeuhadnul(int cisloKUhadnuti, int tipovaneCislo) {
+        int tolerancePrihorivani = 2;
+        int aktualniTolerance = Math.abs(tipovaneCislo - cisloKUhadnuti);
+        if (aktualniTolerance <= tolerancePrihorivani) {
+            System.out.println("Prihoriva");
+        } else {
+            System.out.println("Sama voda");
+        }
+    }
+
 }
 

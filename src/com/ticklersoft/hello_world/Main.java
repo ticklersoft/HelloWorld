@@ -8,16 +8,14 @@ public class Main {
         //aplikace na hádání čísel od 1 do 10
         System.out.println("Hádej číslo od 1 do 10");
         int cisloKUhadnuti = (int) (Math.random()*10);
-
+        int tipovaneCislo = 0;
         //po spuštění vyzve uživatele k zadání prvního čísla
         Scanner sc = new Scanner(System.in);
-        while(true){
-            int tipovaneCislo = sc.nextInt();
+        while(tipovaneCislo != cisloKUhadnuti){
+            tipovaneCislo = sc.nextInt();
             // po zadání odpoví [samá voda, přihořívá, hoří]
 //            System.out.println(cisloKUhadnuti);
-            if(tipovaneCislo == cisloKUhadnuti)   {
-                break;
-            }
+
             int tolerancePrihorivani = 2;
             if(Math.abs(tipovaneCislo - cisloKUhadnuti) <= tolerancePrihorivani)   {
                 System.out.println("Prihoriva");

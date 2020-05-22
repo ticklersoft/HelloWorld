@@ -12,22 +12,21 @@ public class TextovyPokec {
         String zadanyText = zadejTextUzivatele();
 
         if (zadanyText.contains("ahoj")) {
-            System.out.println("ahoj");
+            System.out.println("ahoj, jak se máš?");
         } else {
             System.out.println("promiň zkus to říct nějak jinak");
         }
 
-        if (zadanyText.contains("jak se máš?")) {
-            System.out.println("dobře a ty?");
-        } else {
-            System.out.println("promiň zkus to říct nějak jinak");
-        }
-
-        if (zadanyText.contains("spatně")) {
+        zadanyText = zadejTextUzivatele();
+        if (zadanyText.contains("dobře")) {
+            System.out.println("tak to je fajn");
+        } else if (zadanyText.contains("spatně")) {
             System.out.println("co se stalo?");
         } else {
             System.out.println("promiň zkus to říct nějak jinak");
         }
+
+
     }
 
     private static String zadejTextUzivatele() {

@@ -1,8 +1,9 @@
 package com.ticklersoft.hello_world;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import com.ticklersoft.hello_world.conversation.Answer;
+import com.ticklersoft.hello_world.conversation.Conversation;
+import com.ticklersoft.hello_world.conversation.Question;
+import com.ticklersoft.hello_world.conversation.User;
 
 public class TextovyPokecObjektove {
     public static void main(String[] args) {
@@ -19,86 +20,4 @@ public class TextovyPokecObjektove {
         conversation.startConversation(user);
     }
 
-    public static class Question {
-        private String text;
-        private List<Answer> answers;
-
-        public Question(String text) {
-            this.text = text;
-            answers = new ArrayList<>();
-        }
-
-        public String getText() {
-            return text;
-        }
-
-        public List<Answer> getAnswers() {
-            return answers;
-        }
-
-        public void addAnswer(Answer answer){
-            answers.add(answer);
-        }
-    }
-
-    public static class Answer {
-        private String text;
-        private Question followupQuestion;
-
-        public Answer(String text, Question followupQuestion) {
-            this.text = text;
-            this.followupQuestion = followupQuestion;
-        }
-
-        public String getText() {
-            return text;
-        }
-
-        public Question getFollowupQuestion() {
-            return followupQuestion;
-        }
-
-        public boolean isValidAnswer(String userEnteredText) {
-            return text.equalsIgnoreCase(userEnteredText);
-        }
-    }
-
-    public static class Conversation {
-        private Question initialQuestion;
-
-        public Conversation(Question initialQuestion) {
-            this.initialQuestion = initialQuestion;
-        }
-
-        public void startConversation(User user){
-            Answer answer = user.ask(initialQuestion);
-            while(true) {
-                answer = user.ask(answer.getFollowupQuestion());
-            }
-        }
-    }
-
-    public static class User {
-        private Scanner sc = new Scanner(System.in);
-
-        public Answer ask(Question question){
-            System.out.println(question.getText());
-            List<Answer> answers = question.getAnswers();
-            for (Answer answer : answers) {
-                System.out.println(" - " + answer.getText());
-            }
-            String userEnteredText = getReplyFromUser();
-            for (Answer answer : answers) {
-                if (answer.isValidAnswer(userEnteredText)) {
-                    return answer;
-                }
-            }
-            System.out.println("promiň zkus to říct nějak jinak");
-            return new Answer("unrecognized", question);
-        }
-
-        private String getReplyFromUser() {
-            return sc.nextLine();
-        }
-    }
 }

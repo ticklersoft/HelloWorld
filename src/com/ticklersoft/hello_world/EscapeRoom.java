@@ -10,13 +10,13 @@ public class EscapeRoom {
         User user = new User();
         Room room = new Room();
 
-        Question q1_initialQuestion = new Question("Probudil jsi se v temné místnosti.\nVšude je ticho.");
+        Question q1_initialQuestion = new Question("Q1", "Probudil jsi se v temné místnosti.\nVšude je ticho.");
 
-        Question q2_keyFound = new Question("Našel jsi studený předmět");
-        Question q3_recognizedKey = new Question("Vypadá to jako klíč od dveří. Vzal sis ho do kapsy. Co chceš dělat dál.");
-        Question q4_foundDoor = new Question("Před sebou vidíš světlo v malé dírce.");
-        Question q5_atTheDoor = new Question("Stojíš u světla - je to klíčová dírka.");
-        Question q6_escaped = new Question("Unikl jsi ze místnosti, gratuluji!!");
+        Question q2_keyFound = new Question("Q2", "Našel jsi studený předmět");
+        Question q3_recognizedKey = new Question("Q3", "Vypadá to jako klíč od dveří. Vzal sis ho do kapsy. Co chceš dělat dál.");
+        Question q4_foundDoor = new Question("Q4", "Před sebou vidíš světlo v malé dírce.");
+        Question q5_atTheDoor = new Question("Q5", "Stojíš u světla - je to klíčová dírka.");
+        Question q6_escaped = new Question("Q6", "Unikl jsi ze místnosti, gratuluji!!");
 
         q1_initialQuestion.addAnswer(new Answer("ohmatat okolí", q2_keyFound));
         q1_initialQuestion.addAnswer(new Answer("vstát", q4_foundDoor));

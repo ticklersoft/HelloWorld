@@ -4,12 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Question {
+    private String id;
     private String text;
     private List<Answer> answers;
 
-    public Question(String text) {
+    public Question(String id, String text) {
+        this.id = id;
         this.text = text;
         answers = new ArrayList<>();
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getText() {

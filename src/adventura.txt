@@ -1,0 +1,28 @@
+Q1 Jako každé ráno jsi se vzbudil, oblékl se a poté jsi vyrazil.....
+-na pole;Q2
+-pracovat do dílny;Q3
+-na trh;Q4
+
+Q2 Cestou na pole jsi si všiml zvláštního předmětu ve škarpě. Když jsi se na předmět lépe podíval uviděl jsi že to je kámen, o průměru asi 25 centimertů, hruškovitého tvaru a tmavě zelené barvy.
+-nechat káme na místě;Q5
+-vzít kámen sebou na pole;Q6
+
+Q3 Sešel jsi dolů do přízemí a dal se do práce. Dnes sice sem sice moc lidí nepřišlo, ale stejně bylo práce dost. Večer, když už jsi se chystal zavřít do obchodu přišel muž v loveckých šatech, na zádech nesl vyboulený batoh a tvářil se velmi rozrušeně. Přišel k tobě, sundal si batoh a otevřel ho a vynadl předmět vejčitého tvaru pokrytý četnými runami, které v odpoledním slunci červeně světélkovaly. "Našel jsem to v lese a slyšel jsem, že se v těchto věcech vyznáš, nevíš kolik bych za to dostal?
+-Ukaž, podívám se. Hmm, to vypadá zajímavě. Dám ti za to 300 zlatých;Q7
+-Táhni s tím co nejdál odemě;Q8
+
+Q4 Popadl jsi trakař a vyrazil směrem k městu. Cesta proběhla celkem bezproblému, ve městě jsi veškeré zboží prodal velmi rychle, a tak jsi se rozhodl porozhlédnout se po něčem zajímavém. Po chvilce hledání jsi mezi stánkem s ovocem a stánkem s levnými víny pochybné kvality jsi našel něco, co tě zaujalo. Byl to muž, který se ve spěchu snažil zbalit svůj stánek, ale ne jen tak ledajaký stánek, to co kvapně strkal do mošen zavěšených na svém koni byly různé ochrané amulety a talismay, dokonce tam byla i jedna či dvě dýky s různými rituálními symboly. Měl docela naspěch a když uviděl jak se na jednom konci ulice objevili nějací lidé s meči a rychle se přibližovali, tak všeho nechal, sedl na koně a tryskem vyrazil pryč. Všiml sis že na místě zanechal kromě jiného i jednu velice podivnou knihu.
+-Nikdy jsi nebyl úplně poctivý a navíc máš pocit, že se ten člověk už nevrátí. Stačí jen chvíly počkat až ozbrojenci proběhnou a knihu sebrat;Q9
+-Nech ten prokletý předmět tady;Q10
+
+Q5 TODO
+
+Q6 TODO
+
+Q7 TODO
+
+Q8 TODO
+
+Q9 TODO
+
+Q10 TODO
